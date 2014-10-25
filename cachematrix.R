@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Computing the inverse of a square matrix
+## can be done with the solve function in R.
+## For example, if X is a square invertible matrix,
+## then solve(X) returns its inverse.
 
-## This function creates a special "matrix" object that can cache its inverse.
+## This function creates a special "matrix" 
+## object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   n <- NULL
@@ -18,7 +21,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
+## This function computes the inverse of the special 
+## "matrix" returned by makeCacheMatrix above. If the 
+## inverse has already been calculated (and the matrix
+## has not changed), then the cachesolve should retrieve 
+## the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
   n <- x$getsolve()
@@ -30,5 +37,5 @@ cacheSolve <- function(x, ...) {
   n <- solve(data, ...)
   x$setsolve(n)
   n
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
 }
